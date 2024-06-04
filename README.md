@@ -45,14 +45,5 @@ Ten projekt demonstruje użycie mapy chaotycznej do generowania losowych danych 
 4. **Zainstaluj wymagane biblioteki:**
 
     ```bash
-    pip install cryptography numpy matplotlib pynput
+    pip install cryptography numpy matplotlib pynput pytest
     ```
-
-## Użycie
-
-### 1. Generowanie Losowych Danych
-
-Uruchom skrypt `chaotic_data_generator.py`, aby wygenerować losowe dane:
-
-```bash
-python chaotic_data_generator.py
