@@ -67,7 +67,7 @@ def test_invalid_signature(load_keys_and_data):
     if verify_signature(received_message, received_signature, other_public_key):
         print("Podpis jest prawidłowy, ale nie powinien być.")
     else:
-        print("Podpis jest nieprawidłowy. Powód: użyto innego klucza publicznego.")
+        print("Podpis jest nieprawidłowy. Powód: użyto innego klucza publicznego. Integralność")
     assert verify_signature(received_message, received_signature, other_public_key) == False
 
 def test_modified_message(load_keys_and_data):
@@ -79,5 +79,5 @@ def test_modified_message(load_keys_and_data):
     if verify_signature(modified_message, received_signature, public_key):
         print("Podpis jest prawidłowy, ale nie powinien być.")
     else:
-        print("Podpis jest nieprawidłowy. Powód: wiadomość została zmodyfikowana.")
+        print("Podpis jest nieprawidłowy. Powód: wiadomość została zmodyfikowana. Niezbywalność")
     assert verify_signature(modified_message, received_signature, public_key) == False
